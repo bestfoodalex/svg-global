@@ -1,5 +1,11 @@
-<script>
+<script context="module" lang="ts">
+  import { continent } from '../stores'
+
   export const gClass = 'contspot hover:cursor-pointer hover:fill-primary-orange transition ease-in-out delay-200 duration-150'
+</script>
+
+<script lang="ts">
+  
 </script>
 
 <svg
@@ -13,7 +19,7 @@
     transform="translate(0.000000,2048.000000) scale(0.100000,-0.100000)"
     stroke="none"
   >
-    <g class={gClass} id="continent-north-america">
+    <g class={gClass} id="continent-north-america" on:click={() => { $continent = 'north-america' }}>
       <path d="M6414 18551 c-115 -53 -87 -224 38 -238 109 -12 183 94 128 184 -39
       64 -101 84 -166 54z"/>
       <path d="M6721 18552 c-50 -25 -76 -65 -75 -116 2 -99 104 -157 194 -111 86
@@ -1175,7 +1181,7 @@
       50 -19 75 -19 37 0 49 6 82 39 34 34 39 44 39 86 0 26 -7 60 -17 76 -34 57
       -120 76 -181 39z"/>
     </g>
-    <g class={gClass} id="continent-europe">
+    <g class={gClass} id="continent-europe" on:click={() => { $continent = 'europe' }}>
       <path d="M14654 18556 c-66 -29 -97 -104 -70 -169 33 -81 145 -102 208 -39 62
       62 42 175 -37 208 -42 17 -61 17 -101 0z"/>
       <path d="M14951 18553 c-50 -25 -73 -68 -68 -126 6 -68 46 -108 114 -114 58
@@ -1577,7 +1583,7 @@
       <path d="M15249 11227 c-75 -50 -88 -135 -30 -199 22 -24 37 -32 77 -35 95
       -10 151 45 142 139 -6 54 -27 84 -75 104 -46 20 -75 17 -114 -9z"/>
     </g>
-    <g class={gClass} id="continent-asia">
+    <g class={gClass} id="continent-asia" on:click={() => { $continent = 'asia' }}>
       <path d="M21085 18533 c-70 -15 -95 -43 -95 -108 0 -42 38 -90 85 -105 110
       -36 203 101 129 189 -26 31 -58 38 -119 24z"/>
       <path d="M21337 18530 c-98 -77 -19 -237 106 -213 38 7 85 57 92 97 10 50 -17
@@ -2890,7 +2896,7 @@
       <path d="M22273 7575 c-67 -29 -93 -125 -53 -191 14 -21 36 -39 65 -50 42 -16
       48 -16 90 0 107 41 115 190 12 239 -42 20 -71 21 -114 2z"/>
     </g>
-    <g class={gClass} id="continent-africa">
+    <g class={gClass} id="continent-africa" on:click={() => { $continent = 'africa' }}>
       <path d="M13113 11230 c-82 -50 -83 -181 -1 -226 32 -19 105 -17 138 2 37 23
       60 64 60 111 0 101 -111 166 -197 113z"/>
       <path d="M13440 11243 c-23 -9 -60 -45 -76 -75 -27 -53 -10 -116 42 -157 20
@@ -3253,7 +3259,7 @@
       43 -18 80 -15 42 4 55 10 83 41 28 30 33 43 33 86 0 43 -5 56 -33 86 -28 31
       -41 37 -83 41 -37 3 -57 -1 -80 -15z"/>
     </g>
-    <g class={gClass} id="continent-south-america">
+    <g class={gClass} id="continent-south-america" on:click={() => { $continent = 'south-america' }}>
       <path d="M7325 8791 c-68 -42 -92 -109 -61 -168 29 -56 63 -75 128 -71 66 5
       102 31 117 84 18 67 -13 134 -76 160 -44 19 -72 17 -108 -5z"/>
       <path d="M7633 8795 c-64 -27 -92 -119 -58 -185 25 -47 92 -75 148 -59 114 31
@@ -3485,7 +3491,7 @@
       <path d="M8233 2990 c-85 -51 -81 -179 6 -225 61 -31 136 -11 171 48 70 114
       -63 247 -177 177z"/>
     </g>
-    <g class={gClass} id="continent-australia">
+    <g class={gClass} id="continent-australia" on:click={() => { $continent = 'australia' }}>
       <path d="M23783 7869 c-28 -18 -63 -79 -63 -111 0 -6 9 -31 20 -54 48 -98 188
       -98 234 0 20 43 20 69 -1 113 -32 69 -124 94 -190 52z"/>
       <path d="M24093 7870 c-85 -51 -81 -179 6 -225 61 -31 136 -11 171 48 70 114
