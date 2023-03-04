@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { continentsData } from '../data'
   import { continent } from '../stores'
   import GlobalMap from '../components/GlobalMap.svelte'
 </script>
@@ -13,7 +14,12 @@
       <h2>Travels</h2>
       <p>Click on a continent to see which countries we've traveled to.</p>
       {#if $continent}
-        <p>{$continent}</p>
+        <div>
+          <h3>{continentsData[$continent]?.name || 'Continent Not Found'}</h3>
+          {#if continentsData[$continent]?.description}
+            <p>{continentsData[$continent]?.description}</p>
+          {/if}
+        </div>
       {/if}
     </aside>
   </div>
