@@ -7,12 +7,13 @@ const config = {
 	// for more information about preprocessors
 	preprocess: vitePreprocess(),
 
-  kit: {
-    adapter: adapter(),
+	kit: {
+		adapter: adapter(),
     prerender: {
-      default: true
+      default: true,
+      entries: ['*']
     }
-  }
+	}
 };
 
 export default config;
