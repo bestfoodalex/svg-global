@@ -4,11 +4,17 @@ export type ContinentNames = 'North America' | 'South America' | 'Europe' | 'Afr
 export type ContinentObject = {
   key: Continents,
   name: ContinentNames,
-  countries: string[],
-  img?: string,
-  description?: string,
+  continentCode: string,
 }
 
 export type ContinentsData = {
   [key in Continents]: ContinentObject
 }
+
+export type CountryObject = {
+  key: string,
+  name: string,
+  continentKey: Continents,
+}
+
+export type CountriesData = CountryObject[]
